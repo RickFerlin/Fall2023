@@ -1,27 +1,18 @@
+using System;
 using UnityEngine;
 
 public class PaddleBehaviour : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
+    [SerializeField] private float moveSpeed = 100f;
+    private int moveValue;
 
-    private void FixedUpdate()
+    private void Update()
     {
-        TouchMove();
+        transform.Translate(moveValue * moveSpeed * Time.deltaTime, 0f, 0f);
     }
 
-    void TouchMove()
+    public void Move(int value)
     {
-        if (Input.GetMouseButton(0))
-        {
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (mousePos.x > 1)
-            {
-                transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
-            } else if (mousePos.x < -1)
-            {
-                transform.Translate(-moveSpeed * Time.deltaTime, 0, 0);
-            }
-        }
+        moveValue = value;
     }
-    
 }
