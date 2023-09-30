@@ -726,7 +726,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 124
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &546442366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,6 +740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
+  maxBounceAngle: 75
 --- !u!4 &568242431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
@@ -1045,12 +1046,27 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 56
   m_CollisionDetection: 0
+--- !u!114 &830104147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830104141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6dfb532cee4f464da2f1ed9e01683b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  thrust: 200000
+  minSpeed: 0
 --- !u!1 &844156216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,6 +1246,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1977372615}
     m_Modifications:
+    - target: {fileID: 4081169057820619977, guid: c65417415bb82ac42804859854fe8908, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: d7e419dbc44ff9145ab501e433d585b2, type: 2}
     - target: {fileID: 4081169057820619978, guid: c65417415bb82ac42804859854fe8908, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1240,7 +1260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4081169057820619978, guid: c65417415bb82ac42804859854fe8908, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.29
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081169057820619978, guid: c65417415bb82ac42804859854fe8908, type: 3}
       propertyPath: m_LocalPosition.z
