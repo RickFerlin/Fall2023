@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893122472}
     m_Modifications:
+    - target: {fileID: -7702145495804370810, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
+      propertyPath: states.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -452,6 +456,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893122472}
     m_Modifications:
+    - target: {fileID: -7702145495804370810, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
+      propertyPath: states.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -509,6 +517,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 585101281}
     m_Modifications:
+    - target: {fileID: -7702145495804370810, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
+      propertyPath: states.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -711,22 +723,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 529800738632659597, guid: d678096daf79e984fa39595d30eb7779, type: 3}
   m_PrefabInstance: {fileID: 1749523105}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &546442365
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546442358}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 4.69
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 124
-  m_CollisionDetection: 1
 --- !u!114 &546442366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,6 +783,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 506917784}
     m_Modifications:
+    - target: {fileID: -7702145495804370810, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
+      propertyPath: states.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -844,6 +844,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 506917784}
     m_Modifications:
+    - target: {fileID: -7702145495804370810, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
+      propertyPath: states.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1298,6 +1302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 4081169057820619990, guid: c65417415bb82ac42804859854fe8908, type: 3}
+      propertyPath: m_TagString
+      value: BallBehaviour
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c65417415bb82ac42804859854fe8908, type: 3}
 --- !u!1 &1161468764
@@ -1406,6 +1414,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893122472}
     m_Modifications:
+    - target: {fileID: -7702145495804370810, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
+      propertyPath: states.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1495,8 +1507,8 @@ Camera:
   m_GameObject: {fileID: 1362829203}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215688, g: 0.34272772, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.0997241, g: 0.18152589, b: 0.254717, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1556,6 +1568,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893122472}
     m_Modifications:
+    - target: {fileID: -7702145495804370810, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
+      propertyPath: states.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1617,6 +1633,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 585101281}
     m_Modifications:
+    - target: {fileID: -7702145495804370810, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
+      propertyPath: states.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1674,6 +1694,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 506917784}
     m_Modifications:
+    - target: {fileID: -7702145495804370810, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
+      propertyPath: states.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1781,6 +1805,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893122472}
     m_Modifications:
+    - target: {fileID: -7702145495804370810, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
+      propertyPath: states.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1950,6 +1978,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 506917784}
     m_Modifications:
+    - target: {fileID: -7702145495804370810, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
+      propertyPath: states.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2118,6 +2150,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 506917784}
     m_Modifications:
+    - target: {fileID: -7702145495804370810, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
+      propertyPath: states.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 798947859802560890, guid: ea3990c686cb8174bb5f91079c381668, type: 3}
       propertyPath: m_RootOrder
       value: 3
