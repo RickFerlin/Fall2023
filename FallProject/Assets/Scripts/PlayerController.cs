@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+    
     public float moveSpeed;
     public float jumpForce;
    
@@ -20,7 +22,12 @@ public class PlayerController : MonoBehaviour
     public float rotateSpeed;
     
     public Animator anim;
-    
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         theCam = Camera.main;
@@ -34,11 +41,17 @@ public class PlayerController : MonoBehaviour
         moveDirection.Normalize();
         moveDirection = moveDirection * moveSpeed;
         moveDirection.y = yStore;
-        
-        if (Input.GetButtonDown("Jump"))
-        { 
-            moveDirection.y = jumpForce;
+
+        if (charController.isGrounded)
+        {
+            moveDirection.y = -1f;
+            
+            if (Input.GetButtonDown("Jump"))
+            { 
+                moveDirection.y = jumpForce;
+            }
         }
+        
         
         moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
         
@@ -54,5 +67,6 @@ public class PlayerController : MonoBehaviour
         }
 
         anim.SetFloat("Speed", Mathf.Abs(moveDirection.x) + Mathf.Abs(moveDirection.z));
+        anim.SetBool("Grounded", charController.isGrounded);
     }
 }

@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: ShopKeeper.ma
-//Last modified: Tue, Nov 14, 2023 03:28:01 PM
+//Last modified: Tue, Nov 14, 2023 10:18:26 PM
 //Codeset: 1252
 requires maya "2024";
 currentUnit -l centimeter -a degree -t film;
@@ -9,17 +9,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202302170737-4500172811";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "D7031058-4600-5E5C-FD64-FB9E1BE2D3F2";
+fileInfo "UUID" "6D31A5E2-4FD9-6A4B-B678-A5B1516CA5E1";
 createNode transform -s -n "persp";
 	rename -uid "CE8E2F41-440A-ACCB-DCAF-A6A887A7E126";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.6548491231728732 21.176068801544268 24.309751730551476 ;
-	setAttr ".r" -type "double3" -14.738352730503587 372.59999999948201 4.0738037370352022e-16 ;
+	setAttr ".t" -type "double3" -12.681845752564394 20.339278880599579 35.310831712165268 ;
+	setAttr ".r" -type "double3" -11.138352730473629 341.80000000056037 -2.0925317462949801e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D3041843-464C-E6B1-6CD4-3485029A6E8B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 24.835398504125738;
+	setAttr ".coi" 39.833606458609317;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -13026,7 +13026,7 @@ createNode mesh -n "DoorShape" -p "Door";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "Door_Slider";
 	rename -uid "F6D33838-4F91-E036-007D-11969CCF3B8A";
-	setAttr ".t" -type "double3" -1.6242301508954387 18.639137332678594 0 ;
+	setAttr ".t" -type "double3" -1.7282136466864442 18.639137332678594 0 ;
 	setAttr ".s" -type "double3" 10.444493926400762 2.1131358686289268 1 ;
 createNode mesh -n "Door_SliderShape" -p "Door_Slider";
 	rename -uid "46EE0D9B-4603-55C4-FEEF-6190C1A8BB81";

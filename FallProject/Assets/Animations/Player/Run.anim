@@ -1681,6 +1681,70 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Ear_01_FK_Jnt
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 1.368, y: -4.036, z: -161.902}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Upper_Eyelid_FK_Jnt
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -181.001, y: 86.121, z: 15.022003}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform3/R_Upper_Eyelid_FK_Jnt
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.295, y: 85.859, z: -175.694}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform4/R_Lower_Eyelid_FK_Jnt
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 179.783, y: -4.095001, z: 2.8820038}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Lower_Eyelid_FK_Jnt
   m_PositionCurves:
   - curve:
       serializedVersion: 2
@@ -2023,6 +2087,34 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 3591691727
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 16613670
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2770963249
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3873386867
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 900899786
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -7723,6 +7815,234 @@ AnimationClip:
     path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Ear_01_FK_Jnt
     classID: 4
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1.368
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Upper_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -4.036
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Upper_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -161.902
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Upper_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -181.001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform3/R_Upper_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 86.121
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform3/R_Upper_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 15.022003
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform3/R_Upper_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.295
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform4/R_Lower_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 85.859
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform4/R_Lower_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -175.694
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform4/R_Lower_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 179.783
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Lower_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -4.095001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Lower_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 2.8820038
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Lower_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2
@@ -8502,6 +8822,126 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
     path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/R_Clav_FK_Jnt/R_Arm_01_RK_Jnt/R_Arm_02_RK_Jnt/R_Arm_03_RK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Upper_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Upper_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Upper_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform3/R_Upper_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform3/R_Upper_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform3/R_Upper_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform4/R_Lower_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform4/R_Lower_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/R_Eyeball_FK_Jnt/transform4/R_Lower_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Lower_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Lower_Eyelid_FK_Jnt
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Skeleton/COG_Jnt/Spine_01_FK_Jnt/Spine_02_FK_Jnt/Spine_03_FK_Jnt/Neck_01_FK_Jnt/Neck_02_FK_Jnt/Head_FK_Jnt/L_Eyeball_FK_Jnt/L_Lower_Eyelid_FK_Jnt
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 1
