@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7741800542434343950}
   - component: {fileID: 8342557059396030499}
+  - component: {fileID: 1867190340}
   m_Layer: 0
   m_Name: SystemsManager
   m_TagString: Untagged
@@ -44,3 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a848385d3e2b9468fe2f928d0cae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathEffect: {fileID: 4059786645911642481, guid: 0723b1dc6cc63404aa70f5533f09d9fa, type: 3}
+--- !u!114 &1867190340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789353860232418695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17022a497b9dbf4798074d42cad4059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 5
+  invincibleLength: 1.5
