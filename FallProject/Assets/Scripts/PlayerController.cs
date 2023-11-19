@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class PlayerController : MonoBehaviour
     
     public GameObject[] playerPieces;
 
+    [FormerlySerializedAs("hasDoubleJump")] public bool hasHighJump;
+    [FormerlySerializedAs("canDoubleJump")] public bool canHighJump;
+    public float doubleJumpForce;
+
     private void Awake()
     {
         instance = this;
@@ -50,20 +55,34 @@ public class PlayerController : MonoBehaviour
             moveDirection = (transform.forward * Input.GetAxisRaw("Vertical")) +
                             (transform.right * Input.GetAxisRaw("Horizontal"));
             moveDirection.Normalize();
-            moveDirection = moveDirection * moveSpeed;
+            moveDirection *= moveSpeed;
             moveDirection.y = yStore;
 
             if (charController.isGrounded)
             {
+                playerModel.transform.position = new Vector3(playerModel.transform.position.x, 0,
+                    playerModel.transform.position.z);
                 moveDirection.y = -1f;
+                
+                if(hasHighJump)
+                {
+                    canHighJump = true;
+                }
 
-                if (Input.GetButtonDown("Jump"))
+                if (Input.GetButtonDown("Jump") && !canHighJump)
                 {
                     moveDirection.y = jumpForce;
+                    
+                }
+                else if(Input.GetButtonDown("Jump") && canHighJump)
+                {
+                    moveDirection.y = jumpForce*doubleJumpForce;
+                    canHighJump = false;
                 }
             }
-
-
+            
+            
+            
             moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
 
             //transform.position += moveDirection * (moveSpeed * Time.deltaTime);

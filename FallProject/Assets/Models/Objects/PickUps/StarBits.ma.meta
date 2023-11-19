@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1e5ca4932865d0f4ba42aecd3c69f0ee
+guid: 4a917efc417f9a347b102f265062d70d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: aiStandardSurface1
-    second: {fileID: 2100000, guid: 1b1708ee012b6b04db5a7f7369089a09, type: 2}
+      name: blinn1
+    second: {fileID: 2100000, guid: 131782ee78b83e04987fd0e9eede88db, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
