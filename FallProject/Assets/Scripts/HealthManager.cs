@@ -66,7 +66,6 @@ public class HealthManager : MonoBehaviour
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
-                AudioManager.instance.PlaySFX(playerDeathSound);
                 GameManager.instance.Respawn();
             }
             else
@@ -126,6 +125,7 @@ public class HealthManager : MonoBehaviour
     public void PlayerKilled()
     {
         currentHealth = 0;
+        AudioManager.instance.PlaySFX(playerDeathSound);
         UpdateUI();
     }
 }
