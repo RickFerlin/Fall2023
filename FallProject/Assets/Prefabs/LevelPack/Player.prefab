@@ -75,6 +75,11 @@ MonoBehaviour:
   - {fileID: 1617857246303500293}
   - {fileID: 2635883951397942884}
   - {fileID: 7658929814765797576}
+  hasHighJump: 0
+  canHighJump: 0
+  doubleJumpForce: 1.5
+  playerJumpSound: 6
+  playerWalkSound: 5
 --- !u!143 &5693885647461023086
 CharacterController:
   m_ObjectHideFlags: 0

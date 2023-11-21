@@ -13,6 +13,11 @@ public class HealthManager : MonoBehaviour
     private float invincibleCounter;
     
     public Sprite[] healthBarImages;
+
+    public int playerDamageSound;
+    public int playerDamageSound2;
+    public int playerHealPickupSound;
+    public int playerDeathSound;
     
     private void Awake()
     {
@@ -56,10 +61,12 @@ public class HealthManager : MonoBehaviour
         if (invincibleCounter <= 0)
         {
             currentHealth -= 1;
+            AudioManager.instance.PlaySFX(UnityEngine.Random.Range(0, 2) == 0 ? playerDamageSound : playerDamageSound2);
 
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
+                AudioManager.instance.PlaySFX(playerDeathSound);
                 GameManager.instance.Respawn();
             }
             else
@@ -81,6 +88,7 @@ public class HealthManager : MonoBehaviour
     public void AddHealth(int amountToHeal)
     {
         currentHealth += amountToHeal;
+        AudioManager.instance.PlaySFX(playerHealPickupSound);
         if(currentHealth > maxHealth)
         {
             currentHealth = maxHealth;

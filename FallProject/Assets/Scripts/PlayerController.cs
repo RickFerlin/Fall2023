@@ -31,9 +31,12 @@ public class PlayerController : MonoBehaviour
     
     public GameObject[] playerPieces;
 
-    [FormerlySerializedAs("hasDoubleJump")] public bool hasHighJump;
-    [FormerlySerializedAs("canDoubleJump")] public bool canHighJump;
+    public bool hasHighJump;
+    public bool canHighJump;
     public float doubleJumpForce;
+
+    public int playerJumpSound;
+    public int playerWalkSound;
 
     private void Awake()
     {
@@ -49,7 +52,6 @@ public class PlayerController : MonoBehaviour
     {
         if (!isKnockingBack)
         {
-
             float yStore = moveDirection.y;
             //moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
             moveDirection = (transform.forward * Input.GetAxisRaw("Vertical")) +
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetButtonDown("Jump") && !canHighJump)
                 {
                     moveDirection.y = jumpForce;
+                    AudioManager.instance.PlaySFX(playerJumpSound);
                     
                 }
                 else if(Input.GetButtonDown("Jump") && canHighJump)
@@ -95,6 +98,17 @@ public class PlayerController : MonoBehaviour
                 Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
                 playerModel.transform.rotation = Quaternion.Slerp(playerModel.transform.rotation, newRotation,
                     rotateSpeed * Time.deltaTime);
+                if (!AudioManager.instance.sfx[playerWalkSound].isPlaying)
+                {
+                    AudioManager.instance.PlaySFX(playerWalkSound);
+                }
+            }
+            else
+            {
+                if (AudioManager.instance.sfx[playerWalkSound].isPlaying)
+                {
+                    AudioManager.instance.sfx[playerWalkSound].Stop();
+                }
             }
         }
         

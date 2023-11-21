@@ -289,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpointOn: {fileID: 6210828111382203117}
   checkpointOff: {fileID: 6552775472705754958}
+  checkpointSound: 1
 --- !u!64 &6552775472822158524
 MeshCollider:
   m_ObjectHideFlags: 0

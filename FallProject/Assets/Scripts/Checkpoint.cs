@@ -7,6 +7,8 @@ public class Checkpoint : MonoBehaviour
 {
     public GameObject checkpointOn, checkpointOff;
     
+    public int checkpointSound;
+    
     
     
     // Start is called before the first frame update
@@ -36,6 +38,7 @@ public class Checkpoint : MonoBehaviour
             
             checkpointOff.SetActive(false);
             checkpointOn.SetActive(true);
+            AudioManager.instance.PlaySFX(checkpointSound);
         }
     }
 }

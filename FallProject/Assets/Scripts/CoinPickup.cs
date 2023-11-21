@@ -9,6 +9,8 @@ public class CoinPickup : MonoBehaviour
     
     public GameObject coinPickupEffect;
     
+    public int soundToPlay;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class CoinPickup : MonoBehaviour
                 GameManager.instance.AddCoins(value);
                 Destroy(gameObject);
                 Instantiate(coinPickupEffect, transform.position, transform.rotation);
+                AudioManager.instance.PlaySFX(soundToPlay);
             }
     }
 }
