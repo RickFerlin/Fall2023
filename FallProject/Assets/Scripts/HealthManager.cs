@@ -125,7 +125,8 @@ public class HealthManager : MonoBehaviour
     public void PlayerKilled()
     {
         currentHealth = 0;
-        AudioManager.instance.PlaySFX(playerDeathSound);
         UpdateUI();
+        
+        AudioManager.instance.PlaySFX(playerDeathSound);
     }
 }

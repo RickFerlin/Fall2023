@@ -18,6 +18,10 @@ public class UIManager : MonoBehaviour
     
     public TextMeshProUGUI coinText;
 
+    public GameObject pauseScreen, optionsScreen, levelSelectScreen, mainMenuScreen;
+    
+    public Slider musicVolumeSlider, sfxVolumeSlider;
+
     private void Awake()
     {
         instance = this;
@@ -51,5 +55,40 @@ public class UIManager : MonoBehaviour
                 fadeFromBlack = false;
             }
         }
+    }
+
+    public void Resume()
+    {
+        GameManager.instance.PauseUnpause();
+    }
+    
+    public void OpenOptions()
+    {
+        optionsScreen.SetActive(true);
+    }
+    
+    public void CloseOptions()
+    {
+        optionsScreen.SetActive(false);
+    }
+    
+    public void LevelSelect()
+    {
+        
+    }
+    
+    public void MainMenu()
+    {
+        
+    }
+
+    public void SetMusicLevel()
+    {
+        AudioManager.instance.SetMusicLevel();
+    }
+    
+    public void SetSFXLevel()
+    {
+        AudioManager.instance.SetSFXLevel();
     }
 }
