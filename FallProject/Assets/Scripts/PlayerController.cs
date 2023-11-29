@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
    
     public float gravityScale = 5f;
+    public float bounceForce = 8f;
     
     public CharacterController charController;
     
@@ -146,6 +147,12 @@ public class PlayerController : MonoBehaviour
         
         moveDirection.y = knockBackPower.y;
         moveDirection.x = knockBackPower.x;
+        charController.Move(moveDirection * Time.deltaTime);
+    }
+    
+    public void Bounce()
+    {
+        moveDirection.y = bounceForce;
         charController.Move(moveDirection * Time.deltaTime);
     }
 }

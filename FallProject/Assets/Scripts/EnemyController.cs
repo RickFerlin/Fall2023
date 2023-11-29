@@ -25,6 +25,7 @@ public class EnemyController : MonoBehaviour
     private float waitCounter;
 
     public float chaseRange;
+    public float agroModifier = 5f;
 
     public float attackRange = 1f;
     public float timeBetweenAttacks = 2f;
@@ -101,6 +102,15 @@ public class EnemyController : MonoBehaviour
                     agent.isStopped = true;
                 }
                 
+                if(distanceToPlayer > chaseRange + agroModifier)
+                {
+                    currentState = AIState.isIdle;
+                    waitCounter = waitAtPoint;
+                    
+                    agent.velocity = Vector3.zero;
+                    agent.SetDestination(transform.position);
+                }
+                
                 break;
             
             case AIState.isAttacking:
@@ -118,13 +128,26 @@ public class EnemyController : MonoBehaviour
                     }
                     else
                     {
-                        currentState = AIState.isChasing;
-                        agent.SetDestination(PlayerController.instance.transform.position);
+                        currentState = AIState.isIdle;
+                        waitCounter = waitAtPoint;
+                        
                         agent.isStopped = false;
                     }
                 }
 
                 break;
         }
+    }
+
+    public void SkellyFall()
+    {
+        anim.SetBool("SkellyFall", true);
+        anim.SetBool("isMoving", false);
+        agent.isStopped = true;
+    }
+    
+    public void SkellyStand()
+    {
+        anim.SetBool("SkellyFall", false);
     }
 }
