@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -67,6 +63,12 @@ public class PlayerController : MonoBehaviour
                     playerModel.transform.position.z);
                 moveDirection.y = -1f;
                 
+                if (playerModel.transform.position.y < charController.transform.position.y)
+                {
+                    playerModel.transform.position = new Vector3(playerModel.transform.position.x,
+                        charController.transform.position.y, playerModel.transform.position.z);
+                }
+                
                 if(hasHighJump)
                 {
                     canHighJump = true;
@@ -84,8 +86,6 @@ public class PlayerController : MonoBehaviour
                     canHighJump = false;
                 }
             }
-            
-            
             
             moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
 
