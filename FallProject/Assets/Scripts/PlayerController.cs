@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
 
     public int playerJumpSound;
     public int playerWalkSound;
+    
+    public bool stopMovement;
 
     private void Awake()
     {
@@ -47,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (!isKnockingBack)
+        if (!isKnockingBack && !stopMovement)
         {
             float yStore = moveDirection.y;
             //moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
@@ -134,6 +136,13 @@ public class PlayerController : MonoBehaviour
             {
                 isKnockingBack = false;
             }
+        }
+        
+        if(stopMovement)
+        {
+            moveDirection = Vector3.zero;
+            //moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
+            charController.Move(moveDirection * Time.deltaTime);
         }
 
         anim.SetFloat("Speed", Mathf.Abs(moveDirection.x) + Mathf.Abs(moveDirection.z));
