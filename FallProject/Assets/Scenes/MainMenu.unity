@@ -3388,6 +3388,9 @@ MonoBehaviour:
   firstLevel: Level1
   levelSelect: LevelSelect
   continueButton: {fileID: 1946679856}
+  levelNames:
+  - Level1
+  - NightLevel
 --- !u!1001 &1695986502
 PrefabInstance:
   m_ObjectHideFlags: 0

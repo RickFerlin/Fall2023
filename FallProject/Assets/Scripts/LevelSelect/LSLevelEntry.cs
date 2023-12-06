@@ -1,18 +1,15 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LSLevelEntry : MonoBehaviour
 {
-    public string levelName, levelToCheck;
+    public string levelName, levelToCheck, displayName;
 
     private bool canLoadLevel, levelUnlocked, levelLoading;
     
     public GameObject mapPointActive, mapPointInactive;
     
-    // Start is called before the first frame update
     void Start()
     {
         if(PlayerPrefs.GetInt(levelToCheck + "_unlocked") == 1 || levelToCheck == "")
@@ -27,9 +24,14 @@ public class LSLevelEntry : MonoBehaviour
             mapPointInactive.SetActive(true);
             levelUnlocked = false;
         }
+        
+        if(PlayerPrefs.GetString("CurrentLevel") == levelName)
+        {
+            PlayerController.instance.transform.position = transform.position;
+            LSResetPosition.instance.respawnPosition = transform.position;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Jump") && canLoadLevel && levelUnlocked && !levelLoading)
@@ -44,6 +46,9 @@ public class LSLevelEntry : MonoBehaviour
         if(other.tag =="Player")
         {
             canLoadLevel = true;
+            
+            LSUIManager.instance.lNamePanel.SetActive(true);
+            LSUIManager.instance.lNameText.text = displayName;
         }
     }
 
@@ -52,6 +57,8 @@ public class LSLevelEntry : MonoBehaviour
         if(other.tag == "Player")
         {
             canLoadLevel = false;
+            
+            LSUIManager.instance.lNamePanel.SetActive(false);
         }
     }
     
@@ -63,5 +70,6 @@ public class LSLevelEntry : MonoBehaviour
         yield return new WaitForSeconds(2f);
         
         SceneManager.LoadScene(levelName);
+        PlayerPrefs.SetString("CurrentLevel", levelName);
     }
 }

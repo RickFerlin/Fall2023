@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +7,8 @@ public class MainMenu : MonoBehaviour
     
     public GameObject continueButton;
     
-    // Start is called before the first frame update
+    public string[] levelNames;
+    
     void Start()
     {
         if(PlayerPrefs.HasKey("Continue"))
@@ -21,18 +20,15 @@ public class MainMenu : MonoBehaviour
             continueButton.SetActive(false);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     public void NewGame()
     {
         SceneManager.LoadScene(firstLevel);
         
         PlayerPrefs.SetInt("Continue", 0);
+        PlayerPrefs.SetString("CurrentLevel", firstLevel);
+        
+        ResetProgress();
     }
     
     public void Continue()
@@ -43,5 +39,15 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+    
+    public void ResetProgress()
+    {
+        for(int i = 0; i < levelNames.Length; i++)
+        {
+            PlayerPrefs.SetInt(levelNames[i] + "_unlocked", 0);
+        }
+        
+        PlayerPrefs.SetInt("Continue", 0);
     }
 }
