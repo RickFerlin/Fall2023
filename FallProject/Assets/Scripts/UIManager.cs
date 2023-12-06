@@ -79,12 +79,14 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(levelSelect);
         
-        //Time.timeScale = 1f;
+        Time.timeScale = 1f;
     }
     
     public void MainMenu()
     {
         SceneManager.LoadScene(mainMenu);
+        
+        Time.timeScale = 1f;
     }
 
     public void SetMusicLevel()

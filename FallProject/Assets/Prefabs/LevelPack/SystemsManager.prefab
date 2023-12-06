@@ -437,7 +437,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: aee1b42dc363e324eaaaccda95d0d768, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1887,6 +1887,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 4059786645911642481, guid: 0723b1dc6cc63404aa70f5533f09d9fa, type: 3}
   currentCoins: 0
+  levelEndMusic: 3
+  levelToLoad: LevelSelect
 --- !u!114 &1867190340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1929,6 +1931,7 @@ MonoBehaviour:
   - {fileID: 363355003}
   - {fileID: 1093909306}
   - {fileID: 1192834573}
+  - {fileID: 140792432429552572}
   sfx:
   - {fileID: 1771719859}
   - {fileID: 2088254334}
