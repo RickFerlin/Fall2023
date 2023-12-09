@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     
     public TextMeshProUGUI coinText;
 
-    public GameObject pauseScreen, optionsScreen, levelSelectScreen, mainMenuScreen;
+    public GameObject pauseScreen, optionsScreen, touchControls;
     
     public Slider musicVolumeSlider, sfxVolumeSlider;
     

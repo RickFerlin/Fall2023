@@ -157,6 +157,7 @@ MonoBehaviour:
   doubleJumpForce: 1.5
   playerJumpSound: 6
   playerWalkSound: 5
+  stopMovement: 0
 --- !u!143 &5693885647461023086
 CharacterController:
   m_ObjectHideFlags: 0

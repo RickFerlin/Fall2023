@@ -24,8 +24,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
         
         respawnPosition = PlayerController.instance.transform.position;
         
@@ -87,19 +87,21 @@ public class GameManager : MonoBehaviour
         if(UIManager.instance.pauseScreen.activeInHierarchy)
         {
             UIManager.instance.pauseScreen.SetActive(false);
+            UIManager.instance.touchControls.SetActive(true);
             
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.visible = false;
+            //Cursor.lockState = CursorLockMode.Locked;
             
             Time.timeScale = 1f;
         }
         else
         {
             UIManager.instance.pauseScreen.SetActive(true);
+            UIManager.instance.touchControls.SetActive(false);
             UIManager.instance.CloseOptions();
             
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
             
             Time.timeScale = 0f;
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.111956455, g: 0.3692247, b: 0.7459805, a: 1}
+  m_IndirectSpecularColor: {r: 0.11312202, g: 0.3696998, b: 0.7416081, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -202,6 +202,38 @@ PrefabInstance:
     - target: {fileID: 1450920188, guid: 2627b0148aad5c548b8aa84047c6607d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535968620, guid: 2627b0148aad5c548b8aa84047c6607d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079460900, guid: 2627b0148aad5c548b8aa84047c6607d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079460900, guid: 2627b0148aad5c548b8aa84047c6607d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079460900, guid: 2627b0148aad5c548b8aa84047c6607d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079460900, guid: 2627b0148aad5c548b8aa84047c6607d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50.120117
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079460900, guid: 2627b0148aad5c548b8aa84047c6607d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -29
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079460901, guid: 2627b0148aad5c548b8aa84047c6607d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1450515611}
+    - target: {fileID: 2079460901, guid: 2627b0148aad5c548b8aa84047c6607d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseUnpause
       objectReference: {fileID: 0}
     - target: {fileID: 4361211161968751219, guid: 2627b0148aad5c548b8aa84047c6607d, type: 3}
       propertyPath: m_Pivot.x
@@ -2243,6 +2275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fe9ec81ba520141b9e1346fb009008, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnPosition: {x: 0, y: 0, z: 0}
 --- !u!64 &247113166
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6358,11 +6391,11 @@ RectTransform:
   m_Father: {fileID: 755259484}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 58}
+  m_SizeDelta: {x: 2560, y: 1181.9999}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1288878492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7167,6 +7200,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa843c1a81b242f4eb1f88f1e046aaad, type: 3}
+--- !u!114 &1450515611 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8342557059396030499, guid: aa843c1a81b242f4eb1f88f1e046aaad, type: 3}
+  m_PrefabInstance: {fileID: 1450515610}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a848385d3e2b9468fe2f928d0cae03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1490288709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 211661955, guid: eee8a9539d0ab71418c5a4744767f47b, type: 3}
@@ -7206,11 +7250,11 @@ RectTransform:
   m_Father: {fileID: 1288878491}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -550}
-  m_SizeDelta: {x: 1830.2119, y: 209.7116}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1928.2119, y: 309.7116}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1497485266
 MonoBehaviour:
   m_ObjectHideFlags: 0

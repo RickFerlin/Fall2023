@@ -34,7 +34,7 @@ public class LSLevelEntry : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && canLoadLevel && levelUnlocked && !levelLoading)
+        if (PlayerController.instance.playerInput.PlayerMain.Jump.triggered && canLoadLevel && levelUnlocked && !levelLoading)
         {
             StartCoroutine(LevelLoadCo());
             levelLoading = true;

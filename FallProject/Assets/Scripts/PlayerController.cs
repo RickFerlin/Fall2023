@@ -1,8 +1,12 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
+
+    public Player playerInput;
+    private Transform cameraMain;
     
     public float moveSpeed;
     public float jumpForce;
@@ -12,7 +16,7 @@ public class PlayerController : MonoBehaviour
     
     public CharacterController charController;
     
-    private Vector3 moveDirection;
+    private Vector3 move;
 
     private Camera theCam;
     
@@ -40,30 +44,37 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        playerInput = new Player();
+        charController = GetComponent<CharacterController>();
     }
 
     private void Start()
     {
         theCam = Camera.main;
+        cameraMain = theCam.transform;
     }
 
     private void Update()
     {
         if (!isKnockingBack && !stopMovement)
         {
-            float yStore = moveDirection.y;
+            float yStore = move.y;
             //moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-            moveDirection = (transform.forward * Input.GetAxisRaw("Vertical")) +
-                            (transform.right * Input.GetAxisRaw("Horizontal"));
-            moveDirection.Normalize();
-            moveDirection *= moveSpeed;
-            moveDirection.y = yStore;
-
+            //moveDirection = 
+                //new Vector3(playerInput.PlayerMain.Move.ReadValue<Vector2>().x, 0f,
+                   // playerInput.PlayerMain.Move.ReadValue<Vector2>().y);
+            Vector2 movementInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
+            move = (cameraMain.forward * movementInput.y + cameraMain.right * movementInput.x);
+            move.Normalize();
+            move *= moveSpeed;
+            move.y = yStore;
+           
             if (charController.isGrounded)
             {
-                playerModel.transform.position = new Vector3(playerModel.transform.position.x, 0,
-                    playerModel.transform.position.z);
-                moveDirection.y = -1f;
+                //charController.Move(move * Time.deltaTime);
+                //playerModel.transform.position = new Vector3(playerModel.transform.position.x, 0,
+                    //playerModel.transform.position.z);
+                    move.y = -.1f;
                 
                 if (playerModel.transform.position.y < charController.transform.position.y)
                 {
@@ -76,29 +87,31 @@ public class PlayerController : MonoBehaviour
                     canHighJump = true;
                 }
 
-                if (Input.GetButtonDown("Jump") && !canHighJump)
+                if (playerInput.PlayerMain.Jump.triggered && !canHighJump)
                 {
-                    moveDirection.y = jumpForce;
+                    move.y = jumpForce;
                     AudioManager.instance.PlaySFX(playerJumpSound);
-                    
                 }
-                else if(Input.GetButtonDown("Jump") && canHighJump)
+                else if(playerInput.PlayerMain.Jump.triggered && canHighJump)
                 {
-                    moveDirection.y = jumpForce*doubleJumpForce;
+                    move.y = jumpForce*doubleJumpForce;
                     canHighJump = false;
+                    AudioManager.instance.PlaySFX(playerJumpSound);
                 }
             }
             
-            moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
+            move.y += Physics.gravity.y * Time.deltaTime * gravityScale;
+            charController.Move(move * Time.deltaTime);
 
             //transform.position += moveDirection * (moveSpeed * Time.deltaTime);
 
-            charController.Move(moveDirection * Time.deltaTime);
-
-            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            
+            
+            if (//Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0
+                 movementInput != Vector2.zero)
             {
                 transform.rotation = Quaternion.Euler(0f, theCam.transform.rotation.eulerAngles.y, 0f);
-                Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
+                Quaternion newRotation = Quaternion.LookRotation(new Vector3(move.x, 0f, move.z));
                 playerModel.transform.rotation = Quaternion.Slerp(playerModel.transform.rotation, newRotation,
                     rotateSpeed * Time.deltaTime);
                 if (!AudioManager.instance.sfx[playerWalkSound].isPlaying)
@@ -119,18 +132,18 @@ public class PlayerController : MonoBehaviour
         {
             knockBackCounter -= Time.deltaTime;
             
-            float yStore = moveDirection.y;
-            moveDirection = playerModel.transform.forward * -knockBackPower.x;
-            moveDirection.y = yStore;
+            float yStore = move.y;
+            move = playerModel.transform.forward * -knockBackPower.x;
+            move.y = yStore;
             
             if (charController.isGrounded)
             {
-                moveDirection.y = -1f;
+                move.y = -1f;
             }
             
-            moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
+            move.y += Physics.gravity.y * Time.deltaTime * gravityScale;
             
-            charController.Move(moveDirection * Time.deltaTime);
+            charController.Move(move * Time.deltaTime);
             
             if (knockBackCounter <= 0)
             {
@@ -140,12 +153,12 @@ public class PlayerController : MonoBehaviour
         
         if(stopMovement)
         {
-            moveDirection = Vector3.zero;
+            move = Vector3.zero;
             //moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
-            charController.Move(moveDirection * Time.deltaTime);
+            charController.Move(move * Time.deltaTime);
         }
 
-        anim.SetFloat("Speed", Mathf.Abs(moveDirection.x) + Mathf.Abs(moveDirection.z));
+        anim.SetFloat("Speed", Mathf.Abs(playerInput.PlayerMain.Move.ReadValue<Vector2>().x) + Mathf.Abs(playerInput.PlayerMain.Move.ReadValue<Vector2>().y));
         anim.SetBool("Grounded", charController.isGrounded);
     }
     
@@ -154,14 +167,24 @@ public class PlayerController : MonoBehaviour
         isKnockingBack = true;
         knockBackCounter = knockBackLength;
         
-        moveDirection.y = knockBackPower.y;
-        moveDirection.x = knockBackPower.x;
-        charController.Move(moveDirection * Time.deltaTime);
+        move.y = knockBackPower.y;
+        move.x = knockBackPower.x;
+        charController.Move(move * Time.deltaTime);
     }
     
     public void Bounce()
     {
-        moveDirection.y = bounceForce;
-        charController.Move(moveDirection * Time.deltaTime);
+        move.y = bounceForce;
+        charController.Move(move * Time.deltaTime);
+    }
+
+    private void OnEnable()
+    {
+        playerInput.Enable();
+    }
+    
+    private void OnDisable()
+    {
+        playerInput.Disable();
     }
 }
